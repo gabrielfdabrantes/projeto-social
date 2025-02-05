@@ -28,6 +28,7 @@ main {
 
     Para isso acontecer, é preciso que o elemento ao qual este está inserido esteja com um position: relative 
 */
+
 #celular {
     position: absolute;
     left: 50%;
@@ -35,9 +36,14 @@ main {
     transform: translate(-50%, -50%);
     height: 627px;
     width: 311px;
-    background-image: url('../imagens/frame-iphone.png');
-    background-repeat: no-repeat;
+    background: url('../imagens/frame-iphone.png') no-repeat;
 }
+
+/* 
+    shorthand background: -color | -image | -position | -repeat | -attachment
+
+obs: o background-size não funciona na shorthand.
+*/
 
 #tela {
     position: relative;
@@ -46,3 +52,37 @@ main {
     width: 268px;
     height: 473px;
 }
+
+#redes-sociais {
+    text-align: right;
+}
+
+#redes-sociais > a > img{
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.389);
+    box-sizing: border-box;
+}
+
+/* 
+    Quando insiro a declaração "border-radius: 50%;" faz com que o ícone se torne redondo.
+
+   box-shadow: deslocamento-x (horizontal) | deslocamento-y (vertical)| desfoco | cor 
+
+   Ao usar a declaração "box-sizing: border-box;" faz com que a borda faça parte da caixa e os outros objetos não sejam influenciados. 
+*/
+
+#redes-sociais > a > img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.578);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.541);
+    transition: transform 0.43s, border 0.35s;
+}
+
+/* 
+    Quando insiro a declaração "transform: translate( ); irá fazer com que a caixa seja transportada de um lugar para outro. Valores positivos transladam para direita e para baixo e valores negativos para esquerda e para cima.
+
+    A propriedade "transition" permite realizar uma transição entre dois estados de um elemento.
+    No caso acima, utilizei essa transição em relação a outra propriedade "transform" e "border". Na prática, significou que após 0.43s a minha caixa irá fazer o movimento de translação de 2px para esquerda e 2px para cima (isso é definido com os valores negativos) e após 0.35s aparecerá a borda.
+*/
