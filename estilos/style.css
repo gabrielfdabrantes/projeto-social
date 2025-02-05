@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-image: url('../imagens/fundo-madeira.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+/* 
+    Ao usar as configurações de position: absolute; left: 50%; top: 50%; e transform: translate(-50%, -50%); irá fazer com que o objeto fique centralizado na tela. 
+
+    Para isso acontecer, é preciso que o elemento ao qual este está inserido esteja com um position: relative 
+*/
+#celular {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 627px;
+    width: 311px;
+    background-image: url('../imagens/frame-iphone.png');
+    background-repeat: no-repeat;
+}
+
+#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 268px;
+    height: 473px;
+}
